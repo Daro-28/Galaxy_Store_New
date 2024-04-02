@@ -1,6 +1,6 @@
 # GalaxyStore
 
-![GalaxyStore Logo](.galaxystore-master/ecommerce/ecommerce/static/images/logo.png)
+![GalaxyStore Logo](./galaxystore-master/ecommerce/ecommerce/static/images/logo.png)
 
 GalaxyStore es una plataforma de comercio electrónico diseñada para la venta de productos relacionados con el espacio y la ciencia ficción. Este repositorio contiene el código fuente y los recursos necesarios para ejecutar la aplicación GalaxyStore.
 
