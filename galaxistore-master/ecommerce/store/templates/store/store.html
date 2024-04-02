@@ -1,0 +1,34 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div id="advertisementNotRegistred" style="display: none; background-color: rgb(104, 4, 4); color: white; padding: 10px; position: fixed; top: 15%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+  Debes iniciar sesión o registrarte para realizar esta acción. 💀
+</div>
+
+<div id="advertisementNotRegistredmany" style="display: none; background-color: rgb(166, 0, 0); color: white; padding: 10px; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;">
+  Amigo, Registrate... En serio... 💀
+</div>
+
+<div class="dashboardContainer">
+  <div class="dashboardHeader">Inicio>Ropa</div>
+  <div class="productContainer">
+    {% for producto in productos %}
+      <div class="product">
+        <div class="productImg">
+          <img id="productIMG" src="{% static  producto.imagen %}" alt="{{ producto.nombre }}" />
+        </div>
+        <div class="productName">{{ producto.nombre }}</div>
+        <div class="productBuyDetails">
+          <div class="productPrice">${{ producto.precio }}</div>
+          <div class="productAddCar">
+            <button title="Añadir al Carrito" data-product="{{producto.id}}" data-action="add" class="button-add update-cart addCartButton"> <span class="material-symbols-outlined navbarTagsUserIcon">
+              add_shopping_cart
+              </span> </button>
+        </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}
